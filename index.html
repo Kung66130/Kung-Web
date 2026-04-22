@@ -3,117 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KungLab | My Projects Hub</title>
-    <meta name="description" content="ยินดีต้อนรับสู่ KungLab แหล่งรวมโปรเจคการเขียนโปรแกรม บอทเทรด และแอปพลิเคชันต่างๆ">
+    <title>KungLab | Automation, Trading Bot และเว็บแอปของผม</title>
+    <meta name="description" content="KungLab คือพื้นที่รวมโปรเจกต์ของผม ตั้งแต่ Trading Bot, Automation Workflow, Web System ไปจนถึง Mobile App พร้อมลิงก์ดูเดโมและซอร์สโค้ดจริง">
+    <meta name="theme-color" content="#08111f">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KungLab | Automation, Trading Bot และเว็บแอปของผม">
+    <meta property="og:description" content="ดูโปรเจกต์จริงของ KungLab ทั้งระบบเทรดอัตโนมัติ Automation และแอปที่เปิดใช้งานอยู่บนโดเมนนี้">
+    <meta property="og:url" content="https://kunglab.online/">
+    <meta property="og:image" content="https://kunglab.online/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KungLab">
+    <meta name="twitter:description" content="Automation, Trading Bot และเว็บแอปที่ผมกำลังสร้าง">
+    <meta name="twitter:image" content="https://kunglab.online/og-image.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Anuphan:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
-    
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
     <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Kung<span>Lab</span></a>
-            <nav class="nav-links">
-                <a href="#home" class="nav-link">หน้าแรก</a>
-                <a href="#projects" class="nav-link">โปรเจค</a>
-                <a href="#contact" class="nav-link">ติดต่อ</a>
+        <div class="nav-shell">
+            <a href="#home" class="logo">Kung<span>Lab</span></a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home">หน้าแรก</a>
+                <a href="#projects">โปรเจกต์</a>
+                <a href="#bot-trade">Bot Trade</a>
+                <a href="#contact">ติดต่อ</a>
             </nav>
+            <a class="nav-cta" href="https://github.com/Kung66130" target="_blank" rel="noreferrer">GitHub</a>
         </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">ยินดีต้อนรับสู่ <span>KungLab</span></h1>
-                <p class="hero-subtitle">พื้นที่รวบรวมผลงานด้านการพัฒนาซอฟต์แวร์ ระบบอัตโนมัติ และนวัตกรรมดิจิทัล</p>
-                <a href="#projects" class="btn btn-primary">สำรวจโปรเจค</a>
+        <section id="home" class="hero section-shell">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Automation Lab • Trading Systems • Product Builds</p>
+                <h1>ผมสร้างระบบที่ใช้งานได้จริง ตั้งแต่ <span>Bot Trade</span> ไปจนถึงเว็บแอปและงานออโตเมชัน</h1>
+                <p class="hero-text">
+                    KungLab คือพื้นที่รวมงานที่ผมพัฒนาเอง ทั้งระบบเทรดอัตโนมัติ Dashboard,
+                    Mobile App, Web System และ Workflow Automation ที่เชื่อมงานให้ไหลลื่นขึ้นในโลกจริง
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">ดูโปรเจกต์ทั้งหมด</a>
+                    <a class="btn btn-secondary" href="#bot-trade">สำรวจ Bot Trade</a>
+                </div>
+                <div class="hero-stats">
+                    <article>
+                        <strong>4</strong>
+                        <span>โปรเจกต์หลักบนหน้าเว็บ</span>
+                    </article>
+                    <article>
+                        <strong>Live</strong>
+                        <span>โดเมนจริงพร้อม HTTPS</span>
+                    </article>
+                    <article>
+                        <strong>Render</strong>
+                        <span>Deploy อัตโนมัติจาก GitHub</span>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="hero-panel reveal">
+                <div class="panel-card">
+                    <p class="panel-label">Focus Right Now</p>
+                    <h2>Nebula Trading Bot</h2>
+                    <p class="panel-text">
+                        ระบบเทรดอัตโนมัติที่ผมโฟกัสอยู่ตอนนี้ เน้นให้เห็นสัญญาณ,
+                        ตรวจสถานะ, และต่อยอดเป็น dashboard สำหรับดูภาพรวมแบบ real-time
+                    </p>
+                    <ul class="panel-list">
+                        <li>ดูสถานะบอทได้จากหน้าเว็บ</li>
+                        <li>ต่อยอดไปสู่ Backtest และ Risk Control</li>
+                        <li>เชื่อมกับงานอัตโนมัติอื่นใน ecosystem เดียวกัน</li>
+                    </ul>
+                    <a class="text-link" href="https://nebula-bot-2.onrender.com" target="_blank" rel="noreferrer">เปิดเดโมที่รันอยู่</a>
+                </div>
+            </aside>
+        </section>
+
+        <section class="overview section-shell">
+            <div class="section-heading reveal">
+                <p class="eyebrow">What KungLab Is</p>
+                <h2>ผมไม่ได้ทำแค่หน้าเว็บ แต่สร้างระบบที่ต่อใช้งานได้จริง</h2>
+            </div>
+
+            <div class="overview-grid">
+                <article class="info-card reveal">
+                    <h3>งานที่ถนัด</h3>
+                    <p>Web App, Dashboard, Workflow Automation, Trading Tool และการเชื่อมระบบให้ทำงานร่วมกันได้แบบใช้งานจริง</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>แนวทางทำงาน</h3>
+                    <p>เน้นหน้าเว็บที่ดูชัด ใช้งานง่าย มีลิงก์ไปของจริง และพร้อมต่อยอดจาก MVP ไปสู่ระบบที่เสถียรขึ้น</p>
+                </article>
+                <article class="info-card reveal">
+                    <h3>เป้าหมายของเว็บนี้</h3>
+                    <p>ใช้เป็นหน้า portfolio และ project hub สำหรับรวมเดโม โค้ด และงานเด่นทั้งหมดไว้บนโดเมนเดียว</p>
+                </article>
             </div>
         </section>
 
-        <section id="projects" class="projects-section">
-            <div class="section-header">
-                <h2 class="section-title">ผลงานของผม</h2>
-                <p class="section-desc">รวมโปรเจคต่างๆ ตั้งแต่อัลกอริทึมเทรด ไปจนถึงโมบายแอปพลิเคชัน</p>
+        <section id="projects" class="projects section-shell">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Selected Projects</p>
+                <h2>โปรเจกต์ที่กำลังเดินจริงใน KungLab</h2>
+                <p class="section-text">แต่ละการ์ดด้านล่างพาไปทั้งเดโมที่รันอยู่และซอร์สโค้ด เพื่อให้คนที่เข้ามาดูเห็นของจริงได้ทันที</p>
             </div>
-            
+
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <div class="project-image gradient-1">
-                            <span class="emoji">📈</span>
+                <article class="project-card reveal">
+                    <div class="project-visual gradient-red">
+                        <span>Bot</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-tag">Finance / AI</p>
+                        <h3>Nebula Trading Bot</h3>
+                        <p>ระบบเทรดอัตโนมัติที่กำลังต่อยอดให้มีแดชบอร์ด สถานะคำสั่ง และ flow สำหรับวิเคราะห์ความเสี่ยงแบบชัดเจนขึ้น</p>
+                        <div class="project-links">
+                            <a class="btn btn-secondary" href="https://nebula-bot-2.onrender.com" target="_blank" rel="noreferrer">Live Demo</a>
+                            <a class="btn btn-ghost" href="https://github.com/Kung66130/nebula-bot" target="_blank" rel="noreferrer">Source Code</a>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-category">Finance / AI</span>
-                        <h3 class="project-title">Nebula Trading Bot</h3>
-                        <p class="project-description">ระบบเทรดอัตโนมัติที่มีความแม่นยำสูง พร้อมระบบ Backtest และ Dashboard ตรวจสอบสถานะแบบ Real-time</p>
-                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
-                    </div>
-                </div>
+                </article>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <div class="project-image gradient-2">
-                            <span class="emoji">📱</span>
+                <article class="project-card reveal">
+                    <div class="project-visual gradient-blue">
+                        <span>App</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-tag">Mobile App</p>
+                        <h3>Flare Social App</h3>
+                        <p>แอปโซเชียลที่โฟกัสทั้ง UX และการจัดการเนื้อหาจากผู้ใช้ พร้อมโครงสร้างสำหรับขยายไปสู่ production ได้ต่อ</p>
+                        <div class="project-links">
+                            <a class="btn btn-secondary" href="https://flare-th.onrender.com" target="_blank" rel="noreferrer">Live Demo</a>
+                            <a class="btn btn-ghost" href="https://github.com/Kung66130/Flare" target="_blank" rel="noreferrer">Source Code</a>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-category">Mobile App</span>
-                        <h3 class="project-title">Flare Social App</h3>
-                        <p class="project-description">แอปพลิเคชันโซเชียลเน็ตเวิร์กที่เน้นความปลอดภัย และระบบจัดการ User-Generated Content ที่มีประสิทธิภาพ</p>
-                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
-                    </div>
-                </div>
+                </article>
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <div class="project-image gradient-3">
-                            <span class="emoji">🌱</span>
+                <article class="project-card reveal">
+                    <div class="project-visual gradient-green">
+                        <span>Web</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-tag">Web System</p>
+                        <h3>Green Agro Lab</h3>
+                        <p>ระบบเว็บสำหรับงานเกษตรและการจัดการข้อมูล ช่วยลดขั้นตอนงานเอกสารและรวมการทำงานไว้ใน flow ที่เป็นระเบียบกว่าเดิม</p>
+                        <div class="project-links">
+                            <a class="btn btn-secondary" href="https://green-agro-lab.onrender.com" target="_blank" rel="noreferrer">Live Demo</a>
+                            <a class="btn btn-ghost" href="https://github.com/Kung66130/Green-Agro-Lab" target="_blank" rel="noreferrer">Source Code</a>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-category">Web System</span>
-                        <h3 class="project-title">Green Agro</h3>
-                        <p class="project-description">ระบบบริหารจัดการงานเกษตรกรรมและเอกสารจัดซื้อที่ทันสมัย ช่วยลดความยุ่งยากในการทำงาน</p>
-                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
-                    </div>
-                </div>
+                </article>
 
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <div class="project-image gradient-4">
-                            <span class="emoji">⚙️</span>
+                <article class="project-card reveal">
+                    <div class="project-visual gradient-gold">
+                        <span>Auto</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-tag">Automation</p>
+                        <h3>Pi Server & n8n</h3>
+                        <p>โครงสร้างงานอัตโนมัติบน Raspberry Pi และ n8n สำหรับเชื่อม workflow, trigger และเครื่องมือหลายตัวให้อยู่ในระบบเดียวกัน</p>
+                        <div class="project-links">
+                            <a class="btn btn-secondary" href="https://github.com/Kung66130" target="_blank" rel="noreferrer">GitHub Profile</a>
+                            <a class="btn btn-ghost" href="#contact">คุยรายละเอียด</a>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-category">Automation</span>
-                        <h3 class="project-title">Pi Server & n8n</h3>
-                        <p class="project-description">การวางโครงสร้างเซิร์ฟเวอร์บน Raspberry Pi 5 และระบบ Workflow Automation ด้วย n8n</p>
-                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <div class="contact-card">
-                <h2>สนใจร่วมงานกันไหม?</h2>
-                <p>คุณสามารถติดต่อสอบถามข้อมูลเพิ่มเติมเกี่ยวกับโปรเจคต่างๆ หรือพูดคุยเรื่องโปรเจคใหม่ๆ ได้เสมอ</p>
-                <a href="mailto:contact@kunglab.online" class="btn btn-primary">ส่งข้อความหาผม</a>
+        <section id="bot-trade" class="bot-trade section-shell">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Bot Trade</p>
+                <h2>แนวทางต่อยอด Bot Trade บนเว็บนี้</h2>
+                <p class="section-text">ส่วนนี้ออกแบบมาเพื่อโชว์วิธีคิดและหน้าตาของระบบที่ต่อยอดได้ต่อ ไม่ใช่คำแนะนำการลงทุน</p>
+            </div>
+
+            <div class="bot-grid">
+                <article class="bot-card reveal">
+                    <h3>สิ่งที่ควรมีในหน้า Bot</h3>
+                    <ul class="feature-list">
+                        <li>สถานะบอทแบบ live ว่ากำลังรันหรือหยุด</li>
+                        <li>คู่เหรียญหรือสินทรัพย์ที่กำลังติดตาม</li>
+                        <li>สัญญาณล่าสุด เช่น Buy, Sell, Hold</li>
+                        <li>Performance summary และผล backtest ล่าสุด</li>
+                        <li>Risk guard เช่น max loss, cooldown, stop condition</li>
+                    </ul>
+                </article>
+
+                <article class="bot-card dashboard-card reveal">
+                    <div class="dashboard-head">
+                        <p class="panel-label">Demo Snapshot</p>
+                        <span class="status-pill">Monitoring</span>
+                    </div>
+                    <div class="metric-grid">
+                        <div>
+                            <span class="metric-label">Signal</span>
+                            <strong class="metric-value buy">BUY</strong>
+                        </div>
+                        <div>
+                            <span class="metric-label">Pair</span>
+                            <strong class="metric-value">BTC/USDT</strong>
+                        </div>
+                        <div>
+                            <span class="metric-label">Risk Mode</span>
+                            <strong class="metric-value">Guarded</strong>
+                        </div>
+                        <div>
+                            <span class="metric-label">Last Update</span>
+                            <strong class="metric-value">Real-time</strong>
+                        </div>
+                    </div>
+                    <p class="dashboard-note">เวอร์ชันตอนนี้เป็น showcase เพื่อเตรียมต่อยอดหน้า dashboard และระบบควบคุมความเสี่ยงในขั้นถัดไป</p>
+                </article>
+            </div>
+
+            <article class="bot-flow reveal">
+                <h3>Flow ที่ควรทำต่อ</h3>
+                <div class="flow-grid">
+                    <div>
+                        <span>01</span>
+                        <p>ดึงข้อมูลตลาดและสถานะกลยุทธ์</p>
+                    </div>
+                    <div>
+                        <span>02</span>
+                        <p>ประมวลผลสัญญาณและเงื่อนไขความเสี่ยง</p>
+                    </div>
+                    <div>
+                        <span>03</span>
+                        <p>แสดงผลบนหน้า dashboard และส่งแจ้งเตือน</p>
+                    </div>
+                    <div>
+                        <span>04</span>
+                        <p>บันทึกผลเพื่อใช้วิเคราะห์และ backtest ต่อ</p>
+                    </div>
+                </div>
+                <p class="disclaimer">หมายเหตุ: ส่วน Bot Trade บนหน้านี้ใช้เพื่อสาธิตระบบและแนวทางการพัฒนา ไม่ใช่คำแนะนำด้านการลงทุน</p>
+            </article>
+        </section>
+
+        <section id="contact" class="contact section-shell">
+            <div class="contact-card reveal">
+                <p class="eyebrow">Contact</p>
+                <h2>ถ้าคุณอยากคุยเรื่องโปรเจกต์, Automation หรือ Bot Trade ผมเปิดรับการพูดคุยต่อ</h2>
+                <p class="contact-text">จะคุยเรื่องต่อยอดระบบเดิม ทำ landing page ใหม่ หรือจัดหน้า dashboard สำหรับโปรเจกต์เทรดและออโตเมชันก็ได้</p>
+                <div class="contact-actions">
+                    <a class="btn btn-primary" href="mailto:contact@kunglab.online">ส่งอีเมลหาเรา</a>
+                    <a class="btn btn-ghost" href="https://github.com/Kung66130" target="_blank" rel="noreferrer">ดู GitHub</a>
+                </div>
+                <div class="contact-meta">
+                    <a href="mailto:contact@kunglab.online">contact@kunglab.online</a>
+                    <span>•</span>
+                    <a href="https://github.com/Kung66130" target="_blank" rel="noreferrer">github.com/Kung66130</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 KungLab. All rights reserved.</p>
+    <footer class="footer">
+        <p>© <span id="current-year"></span> KungLab. Built for live projects, automation and trading ideas.</p>
     </footer>
 
     <script src="script.js"></script>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KungLab favicon">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67b6ff" />
+      <stop offset="100%" stop-color="#6ef3da" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#08111f" />
+  <path d="M18 18h10v12l10-12h12L36 34l16 12H39L28 38v8H18V18Z" fill="url(#g)" />
+</svg>
