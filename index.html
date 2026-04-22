@@ -1,312 +1,121 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Demo</title>
-  <style>
-    :root {
-      --bg: #0b1020;
-      --card: #111936;
-      --muted: #9da9d9;
-      --text: #e8ecff;
-      --brand: #7c9bff;
-      --accent: #45d9b8;
-      --border: #26315f;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background: radial-gradient(circle at top, #131f48 0%, var(--bg) 45%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(8px);
-      background: rgba(11, 16, 32, 0.75);
-      border-bottom: 1px solid rgba(157, 169, 217, 0.2);
-      z-index: 20;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-    }
-
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .menu {
-      display: flex;
-      gap: 18px;
-      list-style: none;
-    }
-
-    .menu a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .menu a:hover {
-      color: var(--text);
-    }
-
-    .hero {
-      padding: 90px 0 56px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--muted);
-      margin-bottom: 14px;
-      font-size: 0.9rem;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      margin-bottom: 24px;
-      max-width: 60ch;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      border: 1px solid var(--border);
-      padding: 11px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .btn.primary {
-      background: linear-gradient(135deg, var(--brand), #6d7cff);
-      border: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-card {
-      background: rgba(17, 25, 54, 0.78);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 24px;
-    }
-
-    .avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #7c9bff, #45d9b8);
-      margin-bottom: 14px;
-    }
-
-    .hero-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    section {
-      padding: 30px 0 6px;
-    }
-
-    .section-title {
-      font-size: 1.45rem;
-      margin-bottom: 16px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-    }
-
-    .project {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-    }
-
-    .project h3 {
-      margin-bottom: 8px;
-      font-size: 1.05rem;
-    }
-
-    .project p {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .skills {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .chip {
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: #cdd7ff;
-      background: rgba(17, 25, 54, 0.65);
-      font-size: 0.9rem;
-    }
-
-    .contact {
-      margin: 22px 0 60px;
-      padding: 18px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-    }
-
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer {
-      border-top: 1px solid rgba(157, 169, 217, 0.15);
-      padding: 20px 0 30px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 820px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 64px;
-      }
-
-      .menu {
-        display: none;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KungLab | My Projects Hub</title>
+    <meta name="description" content="ยินดีต้อนรับสู่ KungLab แหล่งรวมโปรเจคการเขียนโปรแกรม บอทเทรด และแอปพลิเคชันต่างๆ">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Anuphan:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Krit<span>.</span>portfolio</div>
-        <ul class="menu">
-          <li><a href="#about">เน€เธเธตเนเธขเธงเธเธฑเธ</a></li>
-          <li><a href="#projects">เนเธเธฃเน€เธเธเธ•เน</a></li>
-          <li><a href="#skills">เธ—เธฑเธเธฉเธฐ</a></li>
-          <li><a href="#contact">เธ•เธดเธ”เธ•เนเธญ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero" id="about">
-      <div>
-        <span class="badge">Frontend Developer</span>
-        <h1>เธชเธงเธฑเธชเธ”เธตเธเธฃเธฑเธ เธเธกเธเธทเนเธญเธเธคเธ•<br />เธเธญเธเธชเธฃเนเธฒเธเน€เธงเนเธเธ—เธตเนเนเธเนเธเธฒเธเธเนเธฒเธข</h1>
-        <p>
-          เธเธตเนเธเธทเธญเธ•เธฑเธงเธญเธขเนเธฒเธเธซเธเนเธฒเธ•เธฒเน€เธงเนเธเนเธเธ•เน Portfolio เธ—เธตเนเธเธธเธ“เธชเธฒเธกเธฒเธฃเธ–เน€เธญเธฒเนเธเธ•เนเธญเธขเธญเธ”เนเธ”เนเธ—เธฑเธเธ—เธต
-          เธ—เธฑเนเธเนเธเธฃเธเธชเธฃเนเธฒเธ เธชเธต เนเธฅเธฐเธเธฒเธฃเธเธฑเธ”เธงเธฒเธเธ–เธนเธเธญเธญเธเนเธเธเนเธซเนเธ”เธนเธกเธทเธญเธญเธฒเธเธตเธเนเธฅเธฐเธญเนเธฒเธเธเนเธฒเธขเธเธเธกเธทเธญเธ–เธทเธญ
-        </p>
-        <div class="buttons">
-          <a href="#projects" class="btn primary">เธ”เธนเธเธฅเธเธฒเธ</a>
-          <a href="#contact" class="btn">เธ•เธดเธ”เธ•เนเธญเธเธฑเธ</a>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Kung<span>Lab</span></a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">หน้าแรก</a>
+                <a href="#projects" class="nav-link">โปรเจค</a>
+                <a href="#contact" class="nav-link">ติดต่อ</a>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <aside class="hero-card">
-        <div class="avatar"></div>
-        <h2 style="margin-bottom: 8px;">Krit Developer</h2>
-        <p style="margin-bottom: 10px;">Bangkok, Thailand</p>
-        <p>
-          เธฃเธฑเธเธเธฒเธเธญเธญเธเนเธเธเนเธฅเธฐเธเธฑเธ’เธเธฒเน€เธงเนเธเนเธเธ•เนเธ•เธฑเนเธเนเธ•เน Landing Page เธ–เธถเธเธฃเธฐเธเธ Dashboard
-          เนเธ”เธขเน€เธเนเธเธเธงเธฒเธกเน€เธฃเนเธง เธเธงเธฒเธกเธชเธงเธขเธเธฒเธก เนเธฅเธฐเธเธฃเธฐเธชเธเธเธฒเธฃเธ“เนเธเธนเนเนเธเน
-        </p>
-      </aside>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">ยินดีต้อนรับสู่ <span>KungLab</span></h1>
+                <p class="hero-subtitle">พื้นที่รวบรวมผลงานด้านการพัฒนาซอฟต์แวร์ ระบบอัตโนมัติ และนวัตกรรมดิจิทัล</p>
+                <a href="#projects" class="btn btn-primary">สำรวจโปรเจค</a>
+            </div>
+        </section>
 
-    <section id="projects">
-      <h2 class="section-title">เนเธเธฃเน€เธเธเธ•เนเน€เธ”เนเธ</h2>
-      <div class="projects">
-        <article class="project">
-          <h3>E-commerce Landing</h3>
-          <p>เธซเธเนเธฒเนเธเธฃเนเธกเธ•เธฃเนเธฒเธเธเนเธฒเธญเธญเธเนเธฅเธเน เธเธฃเนเธญเธกเธเธธเนเธกเธชเธกเธฑเธเธฃเนเธเนเธเธฒเธเนเธฅเธฐเธฃเธตเธงเธดเธงเธฅเธนเธเธเนเธฒ</p>
-        </article>
-        <article class="project">
-          <h3>Task Management App</h3>
-          <p>เน€เธงเนเธเธเธฑเธ”เธเธฒเธฃเธเธฒเธเธ—เธตเธก เธเธฃเนเธญเธกเธฃเธฐเธเธเธฅเธฒเธเธเธฒเธฃเนเธ”เนเธฅเธฐเนเธเนเธเน€เธ•เธทเธญเธเธเธฒเธเธเนเธฒเธ</p>
-        </article>
-        <article class="project">
-          <h3>Restaurant Booking</h3>
-          <p>เธฃเธฐเธเธเธเธญเธเนเธ•เนเธฐเธฃเนเธฒเธเธญเธฒเธซเธฒเธฃเธเธฃเนเธญเธกเนเธเธเธเธฑเธเธ—เธตเนเธเธฑเนเธเนเธฅเธฐเธขเธทเธเธขเธฑเธเธเนเธฒเธเธญเธตเน€เธกเธฅ</p>
-        </article>
-      </div>
-    </section>
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h2 class="section-title">ผลงานของผม</h2>
+                <p class="section-desc">รวมโปรเจคต่างๆ ตั้งแต่อัลกอริทึมเทรด ไปจนถึงโมบายแอปพลิเคชัน</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <div class="project-image gradient-1">
+                            <span class="emoji">📈</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Finance / AI</span>
+                        <h3 class="project-title">Nebula Trading Bot</h3>
+                        <p class="project-description">ระบบเทรดอัตโนมัติที่มีความแม่นยำสูง พร้อมระบบ Backtest และ Dashboard ตรวจสอบสถานะแบบ Real-time</p>
+                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
+                    </div>
+                </div>
 
-    <section id="skills">
-      <h2 class="section-title">เธ—เธฑเธเธฉเธฐ</h2>
-      <div class="skills">
-        <span class="chip">HTML/CSS</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">React</span>
-        <span class="chip">Next.js</span>
-        <span class="chip">Node.js</span>
-      </div>
-    </section>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <div class="project-image gradient-2">
+                            <span class="emoji">📱</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Mobile App</span>
+                        <h3 class="project-title">Flare Social App</h3>
+                        <p class="project-description">แอปพลิเคชันโซเชียลเน็ตเวิร์กที่เน้นความปลอดภัย และระบบจัดการ User-Generated Content ที่มีประสิทธิภาพ</p>
+                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
+                    </div>
+                </div>
 
-    <section class="contact" id="contact">
-      <h2 class="section-title">เธ•เธดเธ”เธ•เนเธญ</h2>
-      <p>เธญเธตเน€เธกเธฅ: <a href="mailto:hello@example.com">hello@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/" target="_blank" rel="noreferrer">github.com/yourname</a></p>
-    </section>
-  </main>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <div class="project-image gradient-3">
+                            <span class="emoji">🌱</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Web System</span>
+                        <h3 class="project-title">Green Agro</h3>
+                        <p class="project-description">ระบบบริหารจัดการงานเกษตรกรรมและเอกสารจัดซื้อที่ทันสมัย ช่วยลดความยุ่งยากในการทำงาน</p>
+                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
+                    </div>
+                </div>
 
-  <footer>
-    <div class="container">ยฉ 2026 Krit Portfolio - Demo Template</div>
-  </footer>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <div class="project-image gradient-4">
+                            <span class="emoji">⚙️</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Automation</span>
+                        <h3 class="project-title">Pi Server & n8n</h3>
+                        <p class="project-description">การวางโครงสร้างเซิร์ฟเวอร์บน Raspberry Pi 5 และระบบ Workflow Automation ด้วย n8n</p>
+                        <a href="#" class="btn btn-secondary">ดูโปรเจค &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-card">
+                <h2>สนใจร่วมงานกันไหม?</h2>
+                <p>คุณสามารถติดต่อสอบถามข้อมูลเพิ่มเติมเกี่ยวกับโปรเจคต่างๆ หรือพูดคุยเรื่องโปรเจคใหม่ๆ ได้เสมอ</p>
+                <a href="mailto:contact@kunglab.online" class="btn btn-primary">ส่งข้อความหาผม</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KungLab. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
